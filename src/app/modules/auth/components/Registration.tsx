@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
@@ -85,7 +86,7 @@ export function Registration() {
         <div className='text-gray-400 fw-bold fs-4'>
           Already have an account?
           <Link to='/auth/login' className='link-primary fw-bolder' style={{marginLeft: '5px'}}>
-            Forgot Password ?
+            Sign in ?
           </Link>
         </div>
         {/* end::Link */}
@@ -93,14 +94,14 @@ export function Registration() {
       {/* end::Heading */}
 
       {/* begin::Action */}
-      <button type='button' className='btn btn-light-primary fw-bolder w-100 mb-10'>
+      {/* <button type='button' className='btn btn-light-primary fw-bolder w-100 mb-10'>
         <img
           alt='Logo'
           src={toAbsoluteUrl('/media/svg/brand-logos/google-icon.svg')}
           className='h-20px me-3'
         />
         Sign in with Google
-      </button>
+      </button> */}
       {/* end::Action */}
 
       <div className='d-flex align-items-center mb-10'>
