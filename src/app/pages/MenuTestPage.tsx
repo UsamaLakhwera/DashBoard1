@@ -427,9 +427,9 @@ const MenuTestPage: FC = () => {
               data-kt-menu-permanent='true'
               data-kt-menu-placement='bottom-start'
             >
-              <div className='btn btn-icon btn-active-light-primary w-30px h-30px w-lg-40px h-lg-40px'>
-                <span className='svg-icon svg-icon-2 svg-icon-lg-1'>
-                  <SVG src={toAbsoluteUrl('/media/logos/logo-compact.svg')} />
+              <div className='btn btn-icon btn-active-light-primary w-30px h-30px w-lg-40px h-lg-40px '>
+                <span className='svg-icon svg-icon-2 svg-icon-lg-1' >
+                  <SVG src={toAbsoluteUrl('/media/logos/logo-compact.svg') } />
                 </span>
               </div>
             </div>
@@ -504,7 +504,8 @@ const MenuTestPage: FC = () => {
                 >
                   <span className='menu-icon'>
                     <span className='svg-icon svg-icon-1'>
-                      <SVG src={toAbsoluteUrl('/media/logos/logo-compact.svg')} />
+                      {/* <SVG src={toAbsoluteUrl('/media/logos/logo-compact.svg')} /> */}
+                      <SVG src={toAbsoluteUrl('<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAIAAABvFaqvAAAABmJLR0QA/wD/AP+gvaeTAAABU0lEQVQ4jWOUk9NloAZgooop1DSIBY/cX37x9x5FP5TNGBgY2O+eEdgzhfXtQ1yKGXGF0V9+8ecZS/9x8sFFmL5/lpwRxfzxJVb1OL323qMI2RQGBoZ/nLzv3QpwqcdpEMRH6IIq5iQbRCrAaRD73TOYghx3TpBskMCeKUzfP6Mo/fZRcOcEXOqZ+fnFsUt8/8h9ZedfPvG//GKMf39x3jwkurKM+dMrXAbhjH5SweDLItgMYmL6Kaf/0T7lHxc/svA/Lv6P9ik/5fQZmLDoQgmj/yzsX4wDPlnF/OUXZ2BgYHn3RGD3ZI77pxkYGH4omX1wyfkjJMPAwMDy8QXvsaU8Zzcw/vmJxaC/fKKvYib/FlMi0i+sr+6KLc5l/vwG3Wtv/WuJN4WBgeG3mPJbv1o4F2HQT0UT4k2BalFCaEEY9J8JX9mEFfxnZsViEIVgGKdsANcUY8Cw52RKAAAAAElFTkSuQmCC">')} />
                     </span>
                   </span>
                   <span className='menu-title'>Dashboard</span>

@@ -11,7 +11,7 @@ export function MenuInner() {
 
        
 
-      <MenuInnerWithSub title='Apps' to='/apps' menuPlacement='bottom-start' menuTrigger='click'>
+      <MenuInnerWithSub title='Chat' to='/apps' menuPlacement='bottom-start' menuTrigger='click'>
         {/* PAGES */}
         <MenuInnerWithSub
           title='Chat'

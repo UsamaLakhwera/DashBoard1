@@ -3,20 +3,23 @@ import {Redirect, Route, Switch} from 'react-router-dom'
 import {FallbackView} from '../../_metronic/partials'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import {MenuTestPage} from '../pages/MenuTestPage'
+// import Users from './../pages/user/Users';
 
 export function PrivateRoutes() {
-  const BuilderPageWrapper = lazy(() => import('../pages/layout-builder/BuilderPageWrapper'))
+  // const BuilderPageWrapper = lazy(() => import('../pages/layout-builder/BuilderPageWrapper'))
+  const Users = lazy(() => import('../pages/user/Users'))
   const ProfilePage = lazy(() => import('../modules/profile/ProfilePage'))
   const WizardsPage = lazy(() => import('../modules/wizards/WizardsPage'))
   const AccountPage = lazy(() => import('../modules/accounts/AccountPage'))
   const WidgetsPage = lazy(() => import('../modules/widgets/WidgetsPage'))
   const ChatPage = lazy(() => import('../modules/apps/chat/ChatPage'))
 
+
   return (
     <Suspense fallback={<FallbackView />}>
       <Switch>
         <Route path='/dashboard' component={DashboardWrapper} />
-        <Route path='/builder' component={BuilderPageWrapper} />
+        <Route path='/builder' component={Users} />
         <Route path='/crafted/pages/profile' component={ProfilePage} />
         <Route path='/crafted/pages/wizards' component={WizardsPage} />
         <Route path='/crafted/widgets' component={WidgetsPage} />

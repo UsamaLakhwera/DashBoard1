@@ -51,9 +51,9 @@ const DashboardPage: FC = () => (
       <div className='col-xxl-4'>
         <ListsWidget3 className='card-xxl-stretch mb-xl-3' />
       </div>
-      <div className='col-xl-8'>
+      {/* <div className='col-xl-8'>
         <TablesWidget10 className='card-xxl-stretch mb-5 mb-xl-8' />
-      </div>
+      </div> */}
     </div>
     {/* end::Row */}
 
