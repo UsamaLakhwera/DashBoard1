@@ -7,12 +7,12 @@ import {
   MixedWidget10,
   MixedWidget11,
   ListsWidget2,
-  ListsWidget3,
+  // ListsWidget3,
   ListsWidget4,
   ListsWidget5,
   ListsWidget6,
   TablesWidget5,
-  TablesWidget10,
+  // TablesWidget10,
   MixedWidget8,
 } from '../../../_metronic/partials/widgets'
 
@@ -47,14 +47,17 @@ const DashboardPage: FC = () => (
     {/* end::Row */}
 
     {/* begin::Row */}
-    <div className='row gy-5 gx-xl-8'>
+
+    {/* ******************************* */}
+    {/* <div className='row gy-5 gx-xl-8'>
       <div className='col-xxl-4'>
         <ListsWidget3 className='card-xxl-stretch mb-xl-3' />
       </div>
       <div className='col-xl-8'>
         <TablesWidget10 className='card-xxl-stretch mb-5 mb-xl-8' />
       </div>
-    </div>
+    </div> */}
+    {/* ******************************* */}
     {/* end::Row */}
 
     {/* begin::Row */}

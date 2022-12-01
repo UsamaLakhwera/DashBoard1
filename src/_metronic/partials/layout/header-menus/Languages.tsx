@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import clsx from 'clsx'
+// import clsx from 'clsx'
 import {FC} from 'react'
 import {toAbsoluteUrl} from '../../../helpers'
-import {useLang, setLanguage} from '../../../i18n/Metronici18n'
+import {useLang} from '../../../i18n/Metronici18n'
+// import {setLanguage} from '../../../i18n/Metronici18n'
 
 const languages = [
   {
@@ -61,7 +62,7 @@ const Languages: FC = () => {
         </span>
       </a>
 
-      <div className='menu-sub menu-sub-dropdown w-175px py-4'>
+      {/* <div className='menu-sub menu-sub-dropdown w-175px py-4'>
         {languages.map((l) => (
           <div
             className='menu-item px-3'
@@ -80,8 +81,8 @@ const Languages: FC = () => {
               {l.name}
             </a>
           </div>
-        ))}
-      </div>
+        ))} */}
+      {/* </div> */}
     </div>
   )
 }

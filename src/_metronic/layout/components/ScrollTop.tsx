@@ -55,8 +55,8 @@ export function ScrollTop() {
   }, [pathname])
 
   return (
-    <div id='kt_scrolltop' className='scrolltop' data-kt-scrolltop='true'>
-      <KTSVG path='/media/icons/duotune/arrows/arr066.svg' />
+    <div style={{backgroundColor: "#f1416c"}} id='kt_scrolltop' className='scrolltop' data-kt-scrolltop='true'>
+      <KTSVG  path='/media/icons/duotune/arrows/arr066.svg' />
     </div>
   )
 }

@@ -7,8 +7,8 @@ import {Link} from 'react-router-dom'
 import {useFormik} from 'formik'
 import * as auth from '../redux/AuthRedux'
 import {login} from '../redux/AuthCRUD'
-import {toAbsoluteUrl} from '../../../../_metronic/helpers'
-
+// import {toAbsoluteUrl} from '../../../../_metronic/helpers'
+// import { GoogleLogin, GoogleLogout } from 'react-google-login';// import {FacebookLogin} from 'react-facebook-login';
 const loginSchema = Yup.object().shape({
   email: Yup.string()
     .email('Wrong email format')
@@ -171,6 +171,25 @@ export function Login() {
           />
           Continue with Google
         </a> */}
+
+
+
+{/* ************************Google Login************************* */}
+
+
+
+{/* ************************Google Login************************* */}
+         
+
+
+   {/* <FacebookLogin
+    appId="1088597931155576"
+    autoLoad={true}
+    fields="name,email,picture"
+    onClick={componentClicked}
+    callback={responseFacebook} />  */}
+
+
         {/* end::Google link */}
 
         {/* begin::Google link */}

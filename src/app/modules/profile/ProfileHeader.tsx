@@ -185,7 +185,7 @@ const ProfileHeader: React.FC = () => {
                 Projects
               </Link>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
@@ -195,7 +195,7 @@ const ProfileHeader: React.FC = () => {
               >
                 Campaigns
               </Link>
-            </li>
+            </li> */}
             <li className='nav-item'>
               <Link
                 className={
@@ -207,7 +207,7 @@ const ProfileHeader: React.FC = () => {
                 Documents
               </Link>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
@@ -217,7 +217,7 @@ const ProfileHeader: React.FC = () => {
               >
                 Connections
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

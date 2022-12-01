@@ -54,10 +54,10 @@ const HeaderUserMenu: FC = () => {
         data-kt-menu-placement='left-start'
         data-kt-menu-flip='bottom'
       >
-        <a href='#' className='menu-link px-5'>
+        {/* <a href='#' className='menu-link px-5'>
           <span className='menu-title'>My Subscription</span>
           <span className='menu-arrow'></span>
-        </a>
+        </a> */}
 
         <div className='menu-sub menu-sub-dropdown w-175px py-4'>
           <div className='menu-item px-3'>
@@ -108,11 +108,11 @@ const HeaderUserMenu: FC = () => {
         </div>
       </div>
 
-      <div className='menu-item px-5'>
+      {/* <div className='menu-item px-5'>
         <a href='#' className='menu-link px-5'>
           My Statements
         </a>
-      </div>
+      </div> */}
 
       <div className='separator my-2'></div>
 

@@ -19,7 +19,7 @@ const UsersWrapper: FC = () => {
     const intl = useIntl()
     return (
       <>
-        <PageTitle breadcrumbs={[]}>{intl.formatMessage({id: 'MENU.USERS'})}</PageTitle>
+        <PageTitle breadcrumbs={[]}>{intl.formatMessage({id: 'USERS'})}</PageTitle>
         <Users />
       </>
     )

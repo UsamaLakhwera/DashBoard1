@@ -9,6 +9,8 @@ import * as auth from '../redux/AuthRedux'
 import {register} from '../redux/AuthCRUD'
 import {Link} from 'react-router-dom'
 import {toAbsoluteUrl} from '../../../../_metronic/helpers'
+import GoogleAndFbLogin from './GoogleLogin'
+import FacebookLoginLogout from './FacebookLogin'
 
 const initialValues = {
   firstname: '',
@@ -103,6 +105,8 @@ export function Registration() {
         Sign in with Google
       </button> */}
       {/* end::Action */}
+      <GoogleAndFbLogin />
+      <FacebookLoginLogout />
 
       <div className='d-flex align-items-center mb-10'>
         <div className='border-bottom border-gray-300 mw-50 w-100'></div>

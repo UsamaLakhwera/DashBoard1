@@ -1,14 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import {Toggle} from './Toggle'
+// import {Toggle} from './Toggle'
 import {Demos} from './Demos'
 import {KTSVG} from '../../../helpers'
 
 export function ExploreMain() {
   return (
     <>
-      <Toggle />
+      {/* <Toggle /> */}
       {/* begin::Exolore drawer */}
       <div
         id='kt_explore'

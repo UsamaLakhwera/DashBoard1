@@ -153,3 +153,31 @@
     }
   }
 }
+
+
+#false.authenticate_user:before{
+  content: "Pending";
+}
+#true.authenticate_user:before{
+  content: "Active";
+}
+.user_status{
+  position: relative;
+}
+#false.user_status:before{
+  content: "Pending";
+  background: #ff0000;
+
+}
+#true.user_status:before{
+  content: "Active";
+  background: #49db49;
+}
+#true.user_status:before, #false.user_status:before{
+  display: block;
+  color: #fff;
+  font-size: 10px;
+  padding: 1px 5px;
+  margin-right: 5px;
+  border-radius: 4px;
+}

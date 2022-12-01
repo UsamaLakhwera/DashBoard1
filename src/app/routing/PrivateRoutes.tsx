@@ -1,6 +1,6 @@
 import React, {Suspense, lazy} from 'react'
 import {Redirect, Route, Switch} from 'react-router-dom'
-import {FallbackView} from '../../_metronic/partials'
+import {ChatInner, FallbackView} from '../../_metronic/partials'
 import { ChatWrapper } from '../pages/chat/Chats'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import {MenuTestPage} from '../pages/MenuTestPage'
@@ -23,6 +23,7 @@ export function PrivateRoutes() {
         <Route path='/dashboard' component={DashboardWrapper} />
         <Route path='/users' component={UsersWrapper} />
         <Route path='/chat' component={ChatWrapper} />
+        <Route path='/chatBox' component={ChatInner} />
         <Route path='/projects' component={ProjectsWrapper} />
         <Route path='/UploadProjects' component={UploadProjectsWrapper} />
         <Route path='/crafted/pages/profile' component={ProfilePage} />
@@ -38,3 +39,6 @@ export function PrivateRoutes() {
     </Suspense>
   )
 }
+
+
+
