@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import {GoogleOAuthProvider} from '@react-oauth/google'
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {useFormik} from 'formik'
@@ -8,9 +9,15 @@ import clsx from 'clsx'
 import * as auth from '../redux/AuthRedux'
 import {register} from '../redux/AuthCRUD'
 import {Link} from 'react-router-dom'
-import {toAbsoluteUrl} from '../../../../_metronic/helpers'
-import GoogleAndFbLogin from './GoogleLogin'
-import FacebookLoginLogout from './FacebookLogin'
+// import {toAbsoluteUrl} from '../../../../_metronic/helpers'
+// import FacebookLoginLogout from './FacebookLogin'
+import LoginLogout from './GoogleLoginLogout'
+
+import './socialLoginMain.css'
+import FacebookLoginLogout from './FaceBookLoginLogout'
+import {BrowserRouter} from 'react-router-dom'
+import {Route} from 'react-router-dom'
+import {DashboardWrapper} from '../../../pages/dashboard/DashboardWrapper'
 
 const initialValues = {
   firstname: '',
@@ -105,14 +112,36 @@ export function Registration() {
         Sign in with Google
       </button> */}
       {/* end::Action */}
-      <GoogleAndFbLogin />
-      <FacebookLoginLogout />
+      <div className='socialLoginMain'>
+        <GoogleOAuthProvider clientId='664029350083-let1upidh0mss6rcgnvurpm1ou69ub27.apps.googleusercontent.com'>
+          <LoginLogout />
+        </GoogleOAuthProvider>
+        <FacebookLoginLogout />
+        {/* 
+      <LoginSocialFacebook 
+      appId="597021728894804"
+      onResolve={(response) =>{
+        console.log(response)
+      }}
+      onReject={(error)=>{
+        console.log(error);
+      }}      
+      >
+      <FacebookLoginButton />
+      </LoginSocialFacebook> */}
 
-      <div className='d-flex align-items-center mb-10'>
+        {/* <BrowserRouter>
+          <Route exact path='/dashboard' component={DashboardWrapper} />
+        </BrowserRouter> */}
+      </div>
+
+      {/* <FacebookLoginLogout /> */}
+
+      {/* <div className='d-flex align-items-center mb-10'>
         <div className='border-bottom border-gray-300 mw-50 w-100'></div>
         <span className='fw-bold text-gray-400 fs-7 mx-2'>OR</span>
         <div className='border-bottom border-gray-300 mw-50 w-100'></div>
-      </div>
+      </div> */}
 
       {formik.status && (
         <div className='mb-lg-15 alert alert-danger'>

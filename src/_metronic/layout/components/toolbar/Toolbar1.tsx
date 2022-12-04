@@ -18,10 +18,10 @@ const Toolbar1: FC = () => {
         <DefaultTitle />
 
         {/* begin::Actions */}
-        <div className='d-flex align-items-center py-1'>
-          {/* begin::Wrapper */}
+        {/* <div className='d-flex align-items-center py-1'>
+          begin::Wrapper
           <div className='me-4'>
-            {/* begin::Menu */}
+            begin::Menu
             <a
               href='#'
               className='btn btn-sm btn-flex btn-light btn-active-primary fw-bolder'
@@ -36,11 +36,11 @@ const Toolbar1: FC = () => {
               Filter
             </a>
 
-            {/* end::Menu */}
+            end::Menu
           </div>
-          {/* end::Wrapper */}
+          end::Wrapper
 
-          {/* begin::Button */}
+          begin::Button
 
           <a
             href='#'
@@ -51,8 +51,8 @@ const Toolbar1: FC = () => {
           >
             Create
           </a>
-          {/* end::Button */}
-        </div>
+          end::Button
+        </div> */}
         {/* end::Actions */}
       </div>
       {/* end::Container */}
