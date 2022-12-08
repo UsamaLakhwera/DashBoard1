@@ -31,7 +31,7 @@ const AsideDefault: FC = () => {
             <img
               alt='Logo'
               className='h-25px logo'
-              src={toAbsoluteUrl('/media/logos/logo-1.svg')}
+              src={toAbsoluteUrl('/media/logos/pngegg.png')}
             />
           </Link>
         )}
@@ -70,7 +70,6 @@ const AsideDefault: FC = () => {
       <div className='aside-menu flex-column-fluid'>
         <AsideMenu asideMenuCSSClasses={classes.asideMenu} />
       </div>
-      
     </div>
   )
 }

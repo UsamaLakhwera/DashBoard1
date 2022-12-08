@@ -1,13 +1,12 @@
 import React, {Suspense, lazy} from 'react'
 import {Redirect, Route, Switch} from 'react-router-dom'
 import {ChatInner, FallbackView} from '../../_metronic/partials'
-import { ChatWrapper } from '../pages/chat/Chats'
+import {ChatWrapper} from '../pages/chat/Chats'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import {MenuTestPage} from '../pages/MenuTestPage'
-import { ProjectsWrapper } from '../pages/projects/Projects'
-import { UploadProjectsWrapper } from '../pages/upload-projects/UploadProjects'
-import { UsersWrapper } from '../pages/users/Users'
-
+import {ProjectsWrapper} from '../pages/projects/Projects'
+import {UploadProjectsWrapper} from '../pages/upload-projects/UploadProjects'
+import {UsersWrapper} from '../pages/users/Users'
 
 export function PrivateRoutes() {
   // const BuilderPageWrapper = lazy(() => import('../pages/layout-builder/BuilderPageWrapper'))
@@ -39,6 +38,3 @@ export function PrivateRoutes() {
     </Suspense>
   )
 }
-
-
-

@@ -93,7 +93,7 @@ export function Login() {
           )}
           type='email'
           name='email'
-          autoComplete='off'
+          autoComplete='on'
         />
         {formik.touched.email && formik.errors.email && (
           <div className='fv-plugins-message-container'>
@@ -162,13 +162,6 @@ export function Login() {
           )}
         </button>
 
-        {/* <div className='socialLoginMain'>
-          <GoogleOAuthProvider clientId='664029350083-let1upidh0mss6rcgnvurpm1ou69ub27.apps.googleusercontent.com'>
-            <LoginLogout />
-          </GoogleOAuthProvider>
-          <FacebookLoginLogout />
-        </div> */}
-
         {/* begin::Separator */}
         {/* <div className='text-center text-muted text-uppercase fw-bolder mb-5'>or</div> */}
         {/* end::Separator */}
@@ -183,9 +176,14 @@ export function Login() {
           Continue with Google
         </a> */}
 
-        {/* ************************Google Login************************* */}
-
-        {/* ************************Google Login************************* */}
+        {/* ************************Google and facebook Login************************* */}
+        <div className='socialLoginMain'>
+          <GoogleOAuthProvider clientId='664029350083-let1upidh0mss6rcgnvurpm1ou69ub27.apps.googleusercontent.com'>
+            <LoginLogout />
+          </GoogleOAuthProvider>
+          <FacebookLoginLogout />
+        </div>
+        {/* ************************Google and facebook Login************************* */}
 
         {/* <FacebookLogin
     appId="1088597931155576"

@@ -5,8 +5,7 @@ import {Registration} from './components/Registration'
 import {ForgotPassword} from './components/ForgotPassword'
 import {Login} from './components/Login'
 import {toAbsoluteUrl} from '../../../_metronic/helpers'
-import {DashboardWrapper} from '../../pages/dashboard/DashboardWrapper'
-
+import './AuthPage.css'
 export function AuthPage() {
   useEffect(() => {
     document.body.classList.add('bg-white')
@@ -30,15 +29,14 @@ export function AuthPage() {
         </a> */}
         {/* end::Logo */}
         {/* begin::Wrapper */}
-        <div className='w-lg-500px bg-white rounded shadow-sm p-10 p-lg-15 mx-auto'>
+        <div className='Authpage'>
+          {/* <div className='w-lg-500px bg-white rounded shadow-sm p-10 p-lg-15 mx-auto'> */}
           <Switch>
             <Route path='/auth/login' component={Login} />
-            {/* <Route path='/dashboard' component={DashboardWrapper} /> */}
             <Route path='/auth/registration' component={Registration} />
             <Route path='/auth/forgot-password' component={ForgotPassword} />
             <Redirect from='/auth' exact={true} to='/auth/login' />
             <Redirect to='/auth/login' />
-            {/* <Redirect to='/dashboard' /> */}
           </Switch>
         </div>
         {/* end::Wrapper */}

@@ -410,11 +410,8 @@ const MenuTestPage: FC = () => {
                         </div>
                       </div>
                     </div>
-                    
-                   
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -782,8 +779,6 @@ const MenuTestPage: FC = () => {
                   <span className='menu-title'>Documentation</span>
                 </a>
               </div>
-              
-             
             </div>
           </div>
         </div>

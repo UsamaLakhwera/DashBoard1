@@ -34,29 +34,32 @@ export const reducer = persistReducer(
     switch (action.type) {
       case actionTypes.Login: {
         const accessToken = action.payload?.accessToken
-        return {accessToken, user: undefined}
+        // console.log(actionTypes.Login)
+        return {accessToken}
       }
-
+      
       case actionTypes.Register: {
         const accessToken = action.payload?.accessToken
         return {accessToken, user: undefined}
       }
-
+      
       case actionTypes.Logout: {
         return initialAuthState
       }
-
+      
       case actionTypes.UserRequested: {
         return {...state, user: undefined}
       }
-
+      
       case actionTypes.UserLoaded: {
         const user = action.payload?.user
         return {...state, user}
       }
-
+      
       case actionTypes.SetUser: {
+        
         const user = action.payload?.user
+        console.log(user)
         return {...state, user}
       }
 

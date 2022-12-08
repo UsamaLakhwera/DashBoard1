@@ -22,19 +22,16 @@ export default function LoginLogout() {
         onSuccess={(credentialResponse) => {
           console.log(credentialResponse.credential)
           const decoded: any = jwt_decode(credentialResponse.credential as string)
-          console.log('checking: ', decoded)
-          console.log(decoded.email_verified)
+          // console.log('checking: ', decoded)
+          // console.log(decoded.email_verified)
           if (decoded.email_verified === true) {
             dispatch(auth.actions.login(credentialResponse.credential as string))
             dispatch(auth.actions.setUser(decoded))
-            console.log('Verified')
-            history.push('/dashboard')
-            window.location.replace('http://localhost:3000/dashboard')
             history.push('/dashboard')
           }
         }}
         onError={() => {
-          console.log('cheking error: ')
+          // console.log('checking error: ')
         }}
       />
     </div>

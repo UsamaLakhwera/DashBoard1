@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {GoogleOAuthProvider} from '@react-oauth/google'
-import React, {useState} from 'react'
+import {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {useFormik} from 'formik'
 import * as Yup from 'yup'
@@ -101,16 +101,15 @@ export function Registration() {
         {/* end::Link */}
       </div>
       {/* end::Heading */}
-
       {/* begin::Action */}
       {/* <button type='button' className='btn btn-light-primary fw-bolder w-100 mb-10'>
         <img
           alt='Logo'
           src={toAbsoluteUrl('/media/svg/brand-logos/google-icon.svg')}
           className='h-20px me-3'
-        />
-        Sign in with Google
-      </button> */}
+          />
+          Sign in with Google
+        </button> */}
       {/* end::Action */}
       <div className='socialLoginMain'>
         <GoogleOAuthProvider clientId='664029350083-let1upidh0mss6rcgnvurpm1ou69ub27.apps.googleusercontent.com'>
@@ -134,21 +133,17 @@ export function Registration() {
           <Route exact path='/dashboard' component={DashboardWrapper} />
         </BrowserRouter> */}
       </div>
-
       {/* <FacebookLoginLogout /> */}
-
       {/* <div className='d-flex align-items-center mb-10'>
         <div className='border-bottom border-gray-300 mw-50 w-100'></div>
         <span className='fw-bold text-gray-400 fs-7 mx-2'>OR</span>
         <div className='border-bottom border-gray-300 mw-50 w-100'></div>
       </div> */}
-
       {formik.status && (
         <div className='mb-lg-15 alert alert-danger'>
           <div className='alert-text font-weight-bold'>{formik.status}</div>
         </div>
       )}
-
       {/* begin::Form group Firstname */}
       <div className='row fv-row mb-7'>
         <div className='col-xl-6'>
@@ -207,7 +202,6 @@ export function Registration() {
         </div>
       </div>
       {/* end::Form group */}
-
       {/* begin::Form group Email */}
       <div className='fv-row mb-7'>
         <label className='form-label fw-bolder text-dark fs-6'>Email</label>
@@ -233,7 +227,6 @@ export function Registration() {
         )}
       </div>
       {/* end::Form group */}
-
       {/* begin::Form group Password */}
       <div className='mb-10 fv-row' data-kt-password-meter='true'>
         <div className='mb-1'>
@@ -265,7 +258,6 @@ export function Registration() {
         </div>
       </div>
       {/* end::Form group */}
-
       {/* begin::Form group Confirm password */}
       <div className='fv-row mb-5'>
         <label className='form-label fw-bolder text-dark fs-6'>Confirm Password</label>
@@ -293,7 +285,6 @@ export function Registration() {
         )}
       </div>
       {/* end::Form group */}
-
       {/* begin::Form group */}
       <div className='fv-row mb-10'>
         <div className='form-check form-check-custom form-check-solid'>
@@ -323,7 +314,6 @@ export function Registration() {
         </div>
       </div>
       {/* end::Form group */}
-
       {/* begin::Form group */}
       <div className='text-center'>
         <button
