@@ -1,0 +1,19 @@
+{
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": [
+    "Agentur",
+    "Arslan",
+    "dtos",
+    "Majeed",
+    "nestjs",
+    "randomstring",
+    "typeorm"
+  ],
+}
