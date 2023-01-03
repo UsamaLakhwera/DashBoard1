@@ -7,7 +7,7 @@ export enum UserStatus {
   DEACTIVATE = `DEACTIVATE`,
 }
 
-export enum UserRole {
+export enum UserRoleEnum {
   ADMIN = `ADMIN`,
   MEMBER = `MEMBER`,
 }
@@ -18,15 +18,14 @@ export enum SocialProvider {
 }
 
 export interface IUser {
-  id: Uuid;
+  id?: Uuid;
   userName: string;
   firstName: string;
   lastName: string;
   email: string;
   password?: string;
-  salt?: string;
   status?: UserStatus;
-  role?: UserRole;
+  role?: UserRoleEnum;
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -37,4 +36,5 @@ export interface IUserParams {
   email: string;
   userName: string;
   status?: UserStatus;
+  role?: UserRoleEnum;
 }

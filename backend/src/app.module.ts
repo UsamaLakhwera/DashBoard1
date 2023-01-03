@@ -6,9 +6,10 @@ import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { ConfigEnum } from '@lib/types';
 
 // config imports files
-import typeormConfig from './config/orm.config';
-import serverConfig from './config/server.config';
-import swaggerConfig from './config/swagger.config';
+import typeormConfig from './config/ormConfig';
+import serverConfig from './config/serverConfig';
+import swaggerConfig from './config/swaggerConfig';
+import jwtConfig from './config/jwtConfig';
 
 // Module imports
 import { AuthModule } from './modules/auth/auth.module';
@@ -18,7 +19,7 @@ import { UserModule } from './modules/user/user.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      load: [typeormConfig, serverConfig, swaggerConfig],
+      load: [typeormConfig, serverConfig, swaggerConfig, jwtConfig],
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],

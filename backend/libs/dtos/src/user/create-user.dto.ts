@@ -1,4 +1,4 @@
-import { UserStatus, IUser, UserRole } from '@lib/types';
+import { UserStatus, IUser, UserRoleEnum } from '@lib/types';
 import {
   IsEmail,
   IsNotEmpty,
@@ -44,8 +44,8 @@ export class CreateUserDto {
   @IsEnum(UserStatus)
   status?: UserStatus;
 
-  @IsEnum(UserRole)
-  role?: UserRole;
+  @IsEnum(UserRoleEnum)
+  role?: UserRoleEnum;
 
   constructor(user: IUser) {
     this.userName = user.userName;

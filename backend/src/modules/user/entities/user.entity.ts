@@ -6,11 +6,8 @@ import {
   Index,
   PrimaryColumn,
 } from 'typeorm';
-import { AUTH_CONSTANT } from '@lib/constants';
-import { hash } from 'bcryptjs';
-import * as randomstring from 'randomstring';
 import { Uuid, UuidTransformer } from '@lib/utils';
-import { IUserParams, IUser, UserStatus, UserRole } from '@lib/types';
+import { IUserParams, IUser, UserStatus, UserRoleEnum } from '@lib/types';
 
 @Entity({ name: `user` })
 export class User implements IUser {
@@ -20,6 +17,7 @@ export class User implements IUser {
       this.lastName = params.lastName;
       this.email = params.email;
       if (params.status) this.setStatus(params.status);
+      if (params.role) this.role = params.role;
     }
   }
 
@@ -58,9 +56,6 @@ export class User implements IUser {
   @Column({ nullable: true })
   password?: string;
 
-  @Column({ nullable: true })
-  salt?: string;
-
   @Column({
     type: `enum`,
     enum: UserStatus,
@@ -70,10 +65,10 @@ export class User implements IUser {
 
   @Column({
     type: `enum`,
-    enum: UserRole,
-    default: UserRole.MEMBER,
+    enum: UserRoleEnum,
+    default: UserRoleEnum.MEMBER,
   })
-  role: UserRole = UserRole.MEMBER;
+  role: UserRoleEnum = UserRoleEnum.MEMBER;
 
   @Column()
   @CreateDateColumn()
@@ -88,12 +83,8 @@ export class User implements IUser {
     this.status = status;
   }
 
-  async setPassword(password: string) {
-    this.salt = randomstring.generate({
-      length: AUTH_CONSTANT.USER_PASS_SALT_LENGTH,
-      charset: `alphanumeric`,
-    });
-    this.password = await hash(password + this.salt, 12);
+  setPassword(password: string) {
+    this.password = password;
   }
 
   setFirstName(firstName: string) {

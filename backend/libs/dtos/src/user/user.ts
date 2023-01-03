@@ -1,4 +1,4 @@
-import { UserStatus, IUser, UserRole } from '@lib/types';
+import { UserStatus, IUser, UserRoleEnum } from '@lib/types';
 import { Uuid } from '@lib/utils';
 
 export class UserDto {
@@ -12,8 +12,8 @@ export class UserDto {
 
   email: string;
 
-  // status?: UserStatus;
-  // role?: UserRole;
+  status?: UserStatus;
+  role?: UserRoleEnum;
 
   createdAt?: Date;
   updatedAt?: Date;
@@ -23,8 +23,8 @@ export class UserDto {
     this.firstName = user.firstName;
     this.lastName = user.lastName;
     this.email = user.email;
-    // if (user.status) this.status = user.status;
-    // if (user.role) this.role = user.role;
+    if (user.status) this.status = user.status;
+    if (user.role) this.role = user.role;
     this.createdAt = user.createdAt;
     this.updatedAt = user.updatedAt;
   }

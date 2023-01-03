@@ -7,11 +7,11 @@ import {
   Param,
   Delete,
 } from '@nestjs/common';
-import { UserService } from '../user/user.service';
+import { AuthService } from './auth.service';
 
 @Controller('auth')
 export class AuthController {
-  constructor(private readonly userService: UserService) {}
+  constructor(private readonly authService: AuthService) {}
 
   // @Post()
   // create(@Body() createAuthDto: CreateAuthDto) {
@@ -21,12 +21,12 @@ export class AuthController {
   @Post('register')
   findAll() {
     console.log('checking I am hbere');
-    return this.userService.findAll();
+    // return this.authService.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.userService.findOne(+id);
+    // return this.authService.findOne(+id);
   }
 
   // @Patch(':id')
@@ -36,6 +36,6 @@ export class AuthController {
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.userService.remove(+id);
+    // return this.authService.remove(+id);
   }
 }
